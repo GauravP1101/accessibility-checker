@@ -8,11 +8,9 @@
   <a href="#"><img alt="HTML" src="https://img.shields.io/badge/HTML-5-E34F26?logo=html5&logoColor=white"></a>
   <a href="#"><img alt="CSS" src="https://img.shields.io/badge/CSS-3-1572B6?logo=css3&logoColor=white"></a>
   <a href="#"><img alt="Alt Text" src="https://img.shields.io/badge/Alt%20Text-Images-8B5CF6"></a>
-  <a href="#"><img alt="Accessible Names" src="https://img.shields.io/badge/Accessible%20Names-Links%20%26%20Buttons-EC4899"></a>
   <a href="#"><img alt="Form Labels" src="https://img.shields.io/badge/Form%20Labels-Inputs-F97316"></a>
   <a href="#"><img alt="Contrast" src="https://img.shields.io/badge/Contrast-1.4.3-4B5563"></a>
   <a href="#"><img alt="Focus Visible" src="https://img.shields.io/badge/Focus%20Visible-2.4.7-22C55E"></a>
-  <a href="#"><img alt="Language of Page" src="https://img.shields.io/badge/Language%20of%20Page-3.1.1-06B6D4"></a>
 
 </p>
 
