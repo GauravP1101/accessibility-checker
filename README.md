@@ -5,7 +5,7 @@ A lightweight **Chrome (Manifest V3) extension** that scans the current page for
 It helps developers, designers, and testers quickly spot issues like missing alt text, poor color contrast, unlabeled form fields, and more. You can **filter by severity**, **highlight elements**, and **export reports** as CSV or JSON.
 
 <p align="center">
-  <img src="docs/UI.png" alt="Extension popup UI showing grouped issues" width="600">
+  <img src="docs/UI.png" alt="Extension popup UI showing grouped issues" width="400">
 </p>
 
 ---
