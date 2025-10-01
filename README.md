@@ -55,7 +55,7 @@ Try scanning these known accessibility test pages:
 ---
 
 ## 📁 Project Structure
-
+```
 accessibility-checker/
 ├─ manifest.json # Extension config (MV3)
 ├─ popup.html # UI markup
@@ -65,8 +65,7 @@ accessibility-checker/
 ├─ base.css # Base styling
 ├─ components.css # UI components
 └─ theme.css # Dark/Light theme support
----
-
+```
 ---
 
 ## 📤 Export Formats
