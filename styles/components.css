@@ -1,0 +1,123 @@
+/* --- Header --- */
+.app-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 12px; border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, #151923, #121723);
+}
+.app-title { display: flex; align-items: center; gap: 8px; }
+.logo { font-size: 20px; }
+h1 { font-size: 16px; font-weight: 700; letter-spacing: 0.2px; }
+
+/* --- Buttons --- */
+.btn {
+  padding: 7px 10px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #121723;
+  color: var(--text);
+  cursor: pointer;
+  transition: 0.15s ease;
+  line-height: 1.1;
+}
+.btn-sm { padding: 5px 8px; font-size: 12px; border-radius: 10px; }
+.btn:hover { transform: translateY(-1px); }
+.btn-primary { background: var(--accent); color: #0b1020; border: none; font-weight: 700; }
+.btn-ghost { background: transparent; }
+
+/* --- Summary --- */
+.summary { padding: 10px 12px; }
+.summary-text { color: var(--muted); margin-bottom: 10px; }
+
+/* Stats */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.card {
+  background: var(--panel); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 10px;
+}
+.stat { text-align: center; }
+.stat-value { font-size: 20px; font-weight: 800; line-height: 1; }
+.stat-label { color: var(--muted); margin-top: 6px; font-size: 12px; }
+.sev-low .stat-value { color: var(--low); }
+.sev-medium .stat-value { color: var(--medium); }
+.sev-high .stat-value { color: var(--high); }
+
+/* --- Compact Toolbar --- */
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr auto;  /* filters left, actions right */
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+/* Filters (segmented pills) */
+.segmented {
+  display: inline-flex;
+  background: #111522;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 2px;
+  gap: 2px;
+}
+.segment {
+  border: none; background: transparent; color: var(--muted);
+  padding: 4px 8px; border-radius: 999px; cursor: pointer; font-size: 12px;
+}
+.segment.active { background: var(--panel); color: var(--text); }
+
+/* Actions row — wraps neatly on narrow widths */
+.actions {
+  display: flex; flex-wrap: wrap; gap: 6px; justify-content: flex-end;
+}
+
+/* --- Groups & Issues --- */
+.groups { padding: 10px 12px; display: grid; gap: 10px; }
+.group {
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--panel);
+}
+.group-header {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  padding: 10px 12px; cursor: pointer; user-select: none;
+}
+.group-title { display: flex; align-items: center; gap: 10px; font-weight: 700; }
+.group-count { color: var(--muted); font-size: 12px; }
+.chev { transition: transform 0.2s ease; }
+.group.open .chev { transform: rotate(90deg); }
+
+.issue-list { display: grid; gap: 6px; padding: 0 12px 12px; }
+.issue {
+  border: 1px dashed var(--border); border-radius: 10px; padding: 8px; background: #101522;
+}
+.issue-header {
+  display: grid; grid-template-columns: auto 1fr auto; gap: 6px; align-items: center;
+}
+.badge {
+  border-radius: 999px; padding: 2px 8px; font-size: 12px; font-weight: 700; border: 1px solid var(--border);
+}
+.badge.high   { background: rgba(255,107,107,0.1);  color: var(--high);   border-color: rgba(255,107,107,0.35); }
+.badge.medium { background: rgba(255,209,102,0.12); color: var(--medium); border-color: rgba(255,209,102,0.35); }
+.badge.low    { background: rgba(108,204,168,0.12); color: var(--low);    border-color: rgba(108,204,168,0.35); }
+
+.issue-title { font-weight: 700; }
+.issue-actions { display: flex; gap: 6px; }
+.issue-actions .btn { padding: 3px 6px; font-size: 11.5px; border-radius: 8px; }
+
+.issue-body { margin-top: 8px; color: var(--muted); font-size: 13px; display: grid; gap: 6px; }
+.kv { display: grid; gap: 2px; }
+.kv b { color: var(--text); }
+.code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: #0c101b; padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border);
+}
+
+/* --- Small screens: stack and reduce --- */
+@media (max-width: 460px) {
+  .toolbar { grid-template-columns: 1fr; gap: 6px; }
+  .actions { justify-content: flex-start; }
+  .summary-cards { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}

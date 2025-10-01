@@ -1,0 +1,14 @@
+/* Optional light theme — add `document.body.classList.add('light')` in popup.js to toggle */
+:root.light {
+  --bg: #f7f9ff;
+  --panel: #ffffff;
+  --text: #0c1222;
+  --muted: #4a5568;
+  --border: #d6deee;
+  --accent: #3b82f6;
+  --low: #059669;
+  --medium: #b45309;
+  --high: #dc2626;
+}
+
+body.light a { color: #2563eb; }

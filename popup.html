@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>A11y Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/theme.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="app-title">
+      <span class="logo" aria-hidden="true">♿</span>
+      <h1>Accessibility Checker</h1>
+    </div>
+    <button id="scanBtn" class="btn btn-primary">Scan this page</button>
+  </header>
+
+  <section class="summary" aria-live="polite">
+    <div id="summaryText" class="summary-text">Click “Scan this page” to begin.</div>
+
+    <div class="summary-cards" id="summaryCards" hidden>
+      <div class="card stat">
+        <div class="stat-value" id="statTotal">0</div>
+        <div class="stat-label">Total issues</div>
+      </div>
+      <div class="card stat sev-low">
+        <div class="stat-value" id="statLow">0</div>
+        <div class="stat-label">Low</div>
+      </div>
+      <div class="card stat sev-medium">
+        <div class="stat-value" id="statMedium">0</div>
+        <div class="stat-label">Medium</div>
+      </div>
+      <div class="card stat sev-high">
+        <div class="stat-value" id="statHigh">0</div>
+        <div class="stat-label">High</div>
+      </div>
+    </div>
+
+    <div class="toolbar" id="toolbar" hidden>
+      <div class="segmented" role="tablist" aria-label="Filter by severity">
+        <button class="segment active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="segment" data-filter="high" role="tab">High</button>
+        <button class="segment" data-filter="medium" role="tab">Medium</button>
+        <button class="segment" data-filter="low" role="tab">Low</button>
+      </div>
+      <div class="actions">
+        <button id="expandAll"   class="btn btn-ghost btn-sm" title="Expand all groups">Expand all</button>
+        <button id="collapseAll" class="btn btn-ghost btn-sm" title="Collapse all groups">Collapse all</button>
+        <button id="copyReport"  class="btn btn-ghost btn-sm" title="Copy readable summary">Copy summary</button>
+        <button id="exportJson"  class="btn btn-ghost btn-sm" title="Export machine-readable JSON">Export JSON</button>
+        <button id="exportCsv"   class="btn btn-ghost btn-sm" title="Export spreadsheet-friendly CSV">Export CSV</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="groups" class="groups" aria-live="polite"></section>
+
+  <footer class="footer">
+    <small>Tips reference: WCAG 2.x common patterns. This tool is an aid and not a certification.</small>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>
