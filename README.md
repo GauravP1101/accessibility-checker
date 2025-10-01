@@ -55,3 +55,41 @@ Try scanning these known accessibility test pages:
 ---
 
 ## 📁 Project Structure
+
+accessibility-checker/
+├─ manifest.json # Extension config (MV3)
+├─ popup.html # UI markup
+├─ popup.js # Popup logic (filters, export, highlight)
+├─ content.js # Page checks (alt text, contrast, labels, etc.)
+└─ styles/
+├─ base.css # Base styling
+├─ components.css # UI components
+└─ theme.css # Dark/Light theme support
+---
+
+---
+
+## 📤 Export Formats
+- **CSV** (spreadsheet-friendly):  
+- **JSON**: Raw structured output (ideal for CI pipelines).
+
+---
+
+## 🚀 Roadmap
+- Suggest nearest **AA-compliant colors** for contrast issues  
+- **Ignore list / Mark resolved** option  
+- Add **heading hierarchy & skip-link checks**  
+- Export only **filtered issues**  
+- Optional integration with **axe-core** for deeper rules  
+
+---
+
+## 🔐 Privacy
+- 100% client-side.  
+- The extension **does not collect or transmit data**.  
+- All analysis runs locally in your browser on the active page.  
+
+## 📄 License
+[MIT](LICENSE) © 2025
+
+---
